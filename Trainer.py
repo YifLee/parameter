@@ -215,7 +215,7 @@ def trainerThread (s2c, c2s, e,
                             model_save()
                             is_reached_goal = True
                             print("训练完毕，即将断开连接！")
-                            print('吃果子的果子狸')
+                            print(吃果子的果子狸)
 
                 
                 need_save = False
