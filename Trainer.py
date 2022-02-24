@@ -91,7 +91,7 @@ def trainerThread (s2c, c2s, e,
             if model.get_target_iter() != 0:
                 if is_reached_goal:
                     io.log_info('Model already trained to target iteration. You can use preview.')
-                    print('果子狸修改')
+                    print(果子狸修改)
                 else:
                     # for tt in range(5):
                     #     try:
@@ -177,7 +177,7 @@ def trainerThread (s2c, c2s, e,
                             model_save()
                             is_reached_goal = True
                             print("训练完毕，即将断开连接！")
-                            print('吃果子的果子狸')
+                            print(吃果子的果子狸)
 
 
                         loss_history = model.get_loss_history()
