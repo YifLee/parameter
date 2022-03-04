@@ -136,7 +136,7 @@ Examples: df, liae, df-d, df-ud, liae-ud, ...
 
         if self.is_first_run() or ask_override:
             if self.options['face_type'] == 'wf' or self.options['face_type'] == 'head':
-                self.options['masked_training']  = False #只训练遮罩部分，True-开启，False-关闭，二选一，建议True
+                self.options['masked_training']  = True #只训练遮罩部分，True-开启，False-关闭，二选一，建议True
 
             self.options['eyes_mouth_prio'] = False      #有先训练眼嘴，True-开启，False-关闭，二选一，按需
 
