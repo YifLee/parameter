@@ -862,4 +862,3 @@ Examples: df, liae, df-d, df-ud, liae-ud, ...
         return self.predictor_func, (self.options['resolution'], self.options['resolution'], 3), merger.MergerConfigMasked(face_type=self.face_type, default_mode = 'overlay')
 
 Model = SAEHDModel
-l
