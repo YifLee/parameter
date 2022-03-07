@@ -138,7 +138,7 @@ Examples: df, liae, df-d, df-ud, liae-ud, ...
             if self.options['face_type'] == 'wf' or self.options['face_type'] == 'head':
                 self.options['masked_training']  = True #只训练遮罩部分，True-开启，False-关闭，二选一，建议True
 
-            self.options['eyes_mouth_prio'] = True      #有先训练眼嘴，True-开启，False-关闭，二选一，按需
+            self.options['eyes_mouth_prio'] = False      #有先训练眼嘴，True-开启，False-关闭，二选一，按需
 
             self.options['uniform_yaw'] = True          #均匀化样本中各角度的素材，True-开启，False-关闭，建议False
 
