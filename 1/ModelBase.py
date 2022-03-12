@@ -305,15 +305,15 @@ class ModelBase(object):
 
     def ask_random_flip(self):
         default_random_flip = self.load_or_def_option('random_flip', True)   #果子狸修改
-        self.options['random_flip'] = True   #随机翻转，True-开启，False-关闭，建议False
+        self.options['random_flip'] =False   #随机翻转，True-开启，False-关闭，建议False
 
     def ask_random_src_flip(self):
         default_random_src_flip = self.load_or_def_option('random_src_flip', False)   #果子狸修改
-        self.options['random_src_flip'] = True   #随机翻转SRC，True-开启，False-关闭，按需
+        self.options['random_src_flip'] = False   #随机翻转SRC，True-开启，False-关闭，按需
 
     def ask_random_dst_flip(self):
         default_random_dst_flip = self.load_or_def_option('random_dst_flip', True)   #果子狸修改
-        self.options['random_dst_flip'] = True    #随机翻转DST，True-开启，False-关闭，按需
+        self.options['random_dst_flip'] = False    #随机翻转DST，True-开启，False-关闭，按需
 
     def ask_batch_size(self, suggest_batch_size=None, range=None):  #果子狸修改
         default_batch_size = self.load_or_def_option('batch_size', suggest_batch_size or self.batch_size)
