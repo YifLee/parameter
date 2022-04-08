@@ -305,11 +305,7 @@ class ModelBase(object):
 
     def ask_random_flip(self):
         default_random_flip = self.load_or_def_option('random_flip', True)   #果子狸修改
-<<<<<<< HEAD:normal/1/ModelBase.py
         self.options['random_flip'] = False   #随机翻转，True-开启，False-关闭，建议False
-=======
-        self.options['random_flip'] = False   #随机翻转，True-开启，False-关闭，建议False
->>>>>>> 0532f6326d250b57644bcd7acaa466408b5a9cd1:1/ModelBase.py
 
     def ask_random_src_flip(self):
         default_random_src_flip = self.load_or_def_option('random_src_flip', False)   #果子狸修改
@@ -322,7 +318,7 @@ class ModelBase(object):
     def ask_batch_size(self, suggest_batch_size=None, range=None):  #果子狸修改
         default_batch_size = self.load_or_def_option('batch_size', suggest_batch_size or self.batch_size)
 
-        batch_size = 4         #BS修改，整数，按需
+        batch_size = 16         #BS修改，整数，按需
 
         if range is not None:
             batch_size = np.clip(batch_size, range[0], range[1])

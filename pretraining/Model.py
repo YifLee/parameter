@@ -151,15 +151,11 @@ Examples: df, liae, df-d, df-ud, liae-ud, ...
 
             self.options['adabelief'] = True            #优化器 True-开启，False-关闭，二选一，建议True
 
-            self.options['lr_dropout']  = True          #学习率下降 True-开启，False-关闭，二选一
+            self.options['lr_dropout']  = False          #学习率下降 True-开启，False-关闭，二选一
 
             self.options['random_warp'] = False          #随机扭曲 True-开启，False-关闭，二选一
 
-<<<<<<< HEAD
-            self.options['gan_power'] = 0.01             #GAN 输入数值0-0.1
-=======
-            self.options['gan_power'] = 0.001             #GAN 输入数值0-0.1
->>>>>>> 0532f6326d250b57644bcd7acaa466408b5a9cd1
+            self.options['gan_power'] = 0.0             #GAN 输入数值0-0.1
 
             if self.options['gan_power'] != 0.0:        #不需要修改
                 #gan_patch_size = np.clip ( io.input_int("GAN patch size", default_gan_patch_size, add_info="3-640", help_message="The higher patch size, the higher the quality, the more VRAM is required. You can get sharper edges even at the lowest setting. Typical fine value is resolution / 8." ), 3, 640 )
@@ -169,9 +165,9 @@ Examples: df, liae, df-d, df-ud, liae-ud, ...
                 self.options['gan_dims'] = default_gan_dims
                 
             if 'df' in self.options['archi']:
-                self.options['true_face_power'] = 0.001   #真脸(使结果更像SRC)，按需输入数值，建议0.001-0.01
+                self.options['true_face_power'] = 0.0   #真脸(使结果更像SRC)，按需输入数值，建议0.001-0.01
 
-                self.options['true_face_power'] = 0.001   #照搬上面
+                self.options['true_face_power'] = 0.0   #照搬上面
 
             self.options['face_style_power'] = 0.0      #学习脸部色彩，按需输入数值，将光影颜色进行传递，高值会导致结果像dst，建议值0.001-0.01，不熟悉不建议使用
 
@@ -179,7 +175,7 @@ Examples: df, liae, df-d, df-ud, liae-ud, ...
 
             self.options['ct_mode'] = 'rct'            #颜色转移，可选值'none','rct','lct','mkl','idt','sot'  !!!注意加英文单引号!!!
 
-            self.options['clipgrad'] = True            #梯度剪裁，按需开启，True-开启，False-关闭，二选一
+            self.options['clipgrad'] = False            #梯度剪裁，按需开启，True-开启，False-关闭，二选一
 
             self.options['pretrain'] = False            #预训练模式，True-开启，False-关闭
 
