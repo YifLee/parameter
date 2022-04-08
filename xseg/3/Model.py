@@ -155,8 +155,10 @@ Examples: df, liae, df-d, df-ud, liae-ud, ...
 
             self.options['random_warp'] = False          #随机扭曲 True-开启，False-关闭，二选一
 
-
             self.options['gan_power'] = 0.01             #GAN 输入数值0-0.1
+            
+
+                                                                               
 
 
             if self.options['gan_power'] != 0.0:        #不需要修改
