@@ -156,6 +156,7 @@ Examples: df, liae, df-d, df-ud, liae-ud, ...
             self.options['random_warp'] = False          #随机扭曲 True-开启，False-关闭，二选一
 
             self.options['gan_power'] = 0.0             #GAN 输入数值0-0.1
+            
 
             if self.options['gan_power'] != 0.0:        #不需要修改
                 #gan_patch_size = np.clip ( io.input_int("GAN patch size", default_gan_patch_size, add_info="3-640", help_message="The higher patch size, the higher the quality, the more VRAM is required. You can get sharper edges even at the lowest setting. Typical fine value is resolution / 8." ), 3, 640 )
