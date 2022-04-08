@@ -1,4 +1,4 @@
-﻿import os
+import os
 import sys
 import traceback
 import queue
@@ -91,11 +91,7 @@ def trainerThread (s2c, c2s, e,
             if model.get_target_iter() != 0:
                 if is_reached_goal:
                     io.log_info('Model already trained to target iteration. You can use preview.')
-<<<<<<< HEAD
-                    print('果子狸修改')
-=======
                     print(果子狸修改)
->>>>>>> 0532f6326d250b57644bcd7acaa466408b5a9cd1
                 else:
                     # for tt in range(5):
                     #     try:
@@ -181,11 +177,7 @@ def trainerThread (s2c, c2s, e,
                             model_save()
                             is_reached_goal = True
                             print("训练完毕，即将断开连接！")
-<<<<<<< HEAD
-                            print('吃果子的果子狸')
-=======
                             print(吃果子的果子狸)
->>>>>>> 0532f6326d250b57644bcd7acaa466408b5a9cd1
 
 
                         loss_history = model.get_loss_history()
@@ -223,11 +215,7 @@ def trainerThread (s2c, c2s, e,
                             model_save()
                             is_reached_goal = True
                             print("训练完毕，即将断开连接！")
-<<<<<<< HEAD
-                            print('吃果子的果子狸')
-=======
                             print(吃果子的果子狸)
->>>>>>> 0532f6326d250b57644bcd7acaa466408b5a9cd1
 
                 
                 need_save = False
@@ -423,8 +411,4 @@ def main(**kwargs):
             except KeyboardInterrupt:
                 s2c.put ( {'op': 'close'} )
 
-<<<<<<< HEAD
         io.destroy_all_windows()
-=======
-        io.destroy_all_windows()
->>>>>>> 0532f6326d250b57644bcd7acaa466408b5a9cd1
