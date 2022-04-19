@@ -136,9 +136,9 @@ Examples: df, liae, df-d, df-ud, liae-ud, ...
 
         if self.is_first_run() or ask_override:
             if self.options['face_type'] == 'wf' or self.options['face_type'] == 'head':
-                self.options['masked_training']  = True #只训练遮罩部分，True-开启，False-关闭，二选一，建议True
+                self.options['masked_training']  = False #只训练遮罩部分，True-开启，False-关闭，二选一，建议True
 
-            self.options['eyes_mouth_prio'] = False      #有先训练眼嘴，True-开启，False-关闭，二选一，按需
+            self.options['eyes_mouth_prio'] = True      #有先训练眼嘴，True-开启，False-关闭，二选一，按需
 
             self.options['uniform_yaw'] = False          #均匀化样本中各角度的素材，True-开启，False-关闭，建议False
 
@@ -174,7 +174,7 @@ Examples: df, liae, df-d, df-ud, liae-ud, ...
 
             self.options['bg_style_power'] = 0.0        #学习背景色彩，按需输入数值，优化面具边缘，建议值0.001-0.01，不熟悉不建议使用
 
-            self.options['ct_mode'] = 'rct'            #颜色转移，可选值'none','rct','lct','mkl','idt','sot'  !!!注意加英文单引号!!!
+            self.options['ct_mode'] = 'none'            #颜色转移，可选值'none','rct','lct','mkl','idt','sot'  !!!注意加英文单引号!!!
 
             self.options['clipgrad'] = False            #梯度剪裁，按需开启，True-开启，False-关闭，二选一
 
