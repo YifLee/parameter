@@ -140,7 +140,7 @@ Examples: df, liae, df-d, df-ud, liae-ud, ...
 
             self.options['eyes_mouth_prio'] = True      #有先训练眼嘴，True-开启，False-关闭，二选一，按需
 
-            self.options['uniform_yaw'] = False          #均匀化样本中各角度的素材，True-开启，False-关闭，建议False
+            self.options['uniform_yaw'] = True          #均匀化样本中各角度的素材，True-开启，False-关闭，建议False
 
         default_gan_power          = self.options['gan_power']          = self.load_or_def_option('gan_power', 0.0)
         default_gan_patch_size     = self.options['gan_patch_size']     = self.load_or_def_option('gan_patch_size', self.options['resolution'] // 8)
@@ -151,9 +151,9 @@ Examples: df, liae, df-d, df-ud, liae-ud, ...
 
             self.options['adabelief'] = True            #优化器 True-开启，False-关闭，二选一，建议True
 
-            self.options['lr_dropout']  = False          #学习率下降 True-开启，False-关闭，二选一
+            self.options['lr_dropout']  = False         #学习率下降 True-开启，False-关闭，二选一
 
-            self.options['random_warp'] = False          #随机扭曲 True-开启，False-关闭，二选一
+            self.options['random_warp'] = True          #随机扭曲 True-开启，False-关闭，二选一
 
             self.options['gan_power'] = 0.0             #GAN 输入数值0-0.1
             
