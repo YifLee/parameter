@@ -318,7 +318,7 @@ class ModelBase(object):
     def ask_batch_size(self, suggest_batch_size=None, range=None):  #果子狸修改
         default_batch_size = self.load_or_def_option('batch_size', suggest_batch_size or self.batch_size)
 
-        batch_size = 4         #BS修改，整数，按需
+        batch_size = 8         #BS修改，整数，按需
 
         if range is not None:
             batch_size = np.clip(batch_size, range[0], range[1])
