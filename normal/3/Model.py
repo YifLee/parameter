@@ -138,9 +138,9 @@ Examples: df, liae, df-d, df-ud, liae-ud, ...
             if self.options['face_type'] == 'wf' or self.options['face_type'] == 'head':
                 self.options['masked_training']  = False  #只训练遮罩部分，True-开启，False-关闭，二选一，建议True
 
-            self.options['eyes_mouth_prio'] = True       #有先训练眼嘴，True-开启，False-关闭，二选一，按需
+            self.options['eyes_mouth_prio'] = False       #有先训练眼嘴，True-开启，False-关闭，二选一，按需
 
-            self.options['uniform_yaw'] = False          #均匀化样本中各角度的素材，True-开启，False-关闭，建议False
+            self.options['uniform_yaw'] = True          #均匀化样本中各角度的素材，True-开启，False-关闭，建议False
 
         default_gan_power          = self.options['gan_power']          = self.load_or_def_option('gan_power', 0.0)
         default_gan_patch_size     = self.options['gan_patch_size']     = self.load_or_def_option('gan_patch_size', self.options['resolution'] // 8)
@@ -151,7 +151,7 @@ Examples: df, liae, df-d, df-ud, liae-ud, ...
 
             self.options['adabelief'] = True            #优化器 True-开启，False-关闭，二选一，建议True
 
-            self.options['lr_dropout']  = True          #学习率下降 True-开启，False-关闭，二选一
+            self.options['lr_dropout']  = False          #学习率下降 True-开启，False-关闭，二选一
 
             self.options['random_warp'] = False          #随机扭曲 True-开启，False-关闭，二选一
 
@@ -165,9 +165,9 @@ Examples: df, liae, df-d, df-ud, liae-ud, ...
                 self.options['gan_dims'] = default_gan_dims
                 
             if 'df' in self.options['archi']:
-                self.options['true_face_power'] = 0.001   #真脸(使结果更像SRC)，按需输入数值，建议0.001-0.01
+                self.options['true_face_power'] = 0.01   #真脸(使结果更像SRC)，按需输入数值，建议0.001-0.01
 
-                self.options['true_face_power'] = 0.001   #照搬上面
+                self.options['true_face_power'] = 0.01   #照搬上面
 
             self.options['face_style_power'] = 0.0      #学习脸部色彩，按需输入数值，将光影颜色进行传递，高值会导致结果像dst，建议值0.001-0.01，不熟悉不建议使用
 
